@@ -2,7 +2,7 @@ const app = new Vue ({
     el:'#app',
     data:{
         url: 'https://api.themoviedb.org/3/search/movie',
-        query: '',
+        query: 'movie',
         api_key: '2c02b686abeba1d47393671cb89a17d8',
         name:'',
         original_name: '',
