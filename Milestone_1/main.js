@@ -1,25 +1,28 @@
 const app = new Vue ({
     el:'#app',
     data:{
-        url: 'https://api.themoviedb.org/3',
+        url: 'https://api.themoviedb.org/3/search/movie',
         query: '',
-        apiKey: '2c02b686abeba1d47393671cb89a17d8',
+        api_key: '2c02b686abeba1d47393671cb89a17d8',
         name:'',
         original_name: '',
         original_language:'',
-        vote_average: undefined
+        vote_average: undefined,
+        searched_text: ''
     },
     methods:{
         search(){
         
-            this.name.forEach((film)=> {
-                   
-            });
+            
         }
     },
     mounted(){
-        const fullUrl = `${this.url}?q=${this.query}&appid=${this.apiKey}`;
+        const fullUrl = `${this.url}?api_key=${this.api_key}&query=${this.query}`;
         console.log(fullUrl);
+        then((response)=>{
+            console.log(response.data.results);
+        })
+        
         axios
             .get(fullUrl)
             .then(resp => {
