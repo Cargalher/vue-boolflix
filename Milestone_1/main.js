@@ -10,7 +10,12 @@ const app = new Vue ({
         vote_average: undefined
     },
     methods:{
-    search
+        search(){
+        
+            this.name.forEach((film)=> {
+                   
+            });
+        }
     },
     mounted(){
         const fullUrl = `${this.url}?q=${this.query}&appid=${this.apiKey}`;
