@@ -7,7 +7,7 @@ const app = new Vue ({
         name:'',
         original_name: '',
         original_language:'',
-        vote_average: undefined,
+        vote_average: null,
         searched_text: ''
     },
     methods:{
@@ -19,9 +19,7 @@ const app = new Vue ({
     mounted(){
         const fullUrl = `${this.url}?api_key=${this.api_key}&query=${this.query}`;
         console.log(fullUrl);
-        then((response)=>{
-            console.log(response.data.results);
-        })
+       
         
         axios
             .get(fullUrl)
