@@ -6,10 +6,21 @@
 body{
     background-color: rgb(53, 53, 92);
 }
+nav{
+    background-color: black;
+}
 .logo{
     height: 70px;
     margin:15px;
 }
 input{
+    margin-top: 15px;
     margin-left: 15px;
+    width: 13%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+.fa-search{
+    padding: 0.3rem;
+    border-radius: 0.5rem;
 }

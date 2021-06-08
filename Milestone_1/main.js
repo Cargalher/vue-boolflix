@@ -1,13 +1,16 @@
 const app = new Vue ({
     el:'#app',
     data:{
-        url: 'https://api.themoviedb.org/3/',
+        url: 'https://api.themoviedb.org/3',
         query: '',
         apiKey: '2c02b686abeba1d47393671cb89a17d8',
         name:'',
         original_name: '',
         original_language:'',
-        vote_average: null
+        vote_average: undefined
+    },
+    methods:{
+    search
     },
     mounted(){
         const fullUrl = `${this.url}?q=${this.query}&appid=${this.apiKey}`;
