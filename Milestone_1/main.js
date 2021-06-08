@@ -5,6 +5,7 @@ const app = new Vue ({
     },
     mounted(){
         axios
+        .get('')
     }
 
 })
