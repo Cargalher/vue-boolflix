@@ -16,15 +16,14 @@
             <img class="logo" src="./img/netflix-logo.png" alt="">
         </nav>
         <main>
-            <input type="search" name="" id="" placeholder="Search for a movie or show"  v-model="searched_text">
+            <input type="search" name="" id="" placeholder="Search for a movie or show"
+              v-model="query" >
             <button type="submit" class="searchButton" @click="search">
                 <i class="fa fa-search"></i>
                 Search
              </button>
-             <ul>
-                 <li v-for="">
-
-                 </li>
+             <ul v-model="query">
+                 <li v-for="title in titles" :type= "search"> {{title}}</li>
              </ul>
         </main>
     </div>
