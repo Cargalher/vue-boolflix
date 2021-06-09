@@ -28,3 +28,8 @@ input{
     padding: 0.3rem;
     border-radius: 0.5rem;
 }
+.flag{
+    width:20px;
+    margin-left: 10px;
+    vertical-align: middle;
+}

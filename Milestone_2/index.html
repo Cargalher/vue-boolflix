@@ -31,7 +31,7 @@
                     <span v-if="result.original_language">{{ result.original_language }}</span>
                     <span v-if="result.vote_average">{{ result.vote_average }}</span>
                     <img class="flag" v-if="flags.includes(result.original_language)"
-                    :src="'/img/ ' + result.original_language + '.png'" >
+                    :src="'./img/' + result.original_language +'.png'" >
                     <span v-else>{{ result.original_language }}</span>
                 </li>
             </ul> 
