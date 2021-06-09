@@ -25,13 +25,17 @@
             <ul class ="MoviesContainer">
                 <li v-for="result in results" class="movie">
                     <h2 v-if="result.title">{{ result.title }}</h2>
+                    <h2 v-if="result.name"> {{ result.name }}</h2> 
                     <span v-if="result.original_title">{{ result.original_title }}</span>
                     <span v-if="result.original_name">{{ result.original_name }}</span>
                     <span v-if="result.original_language">{{ result.original_language }}</span>
                     <span v-if="result.vote_average">{{ result.vote_average }}</span>
-                   <img src="" alt="">
+                    <img class="flag" v-if="flags.includes(result.original_language)"
+                    :src="'/img/ ' + result.original_language + '.png'" >
+                    <span v-else>{{ result.original_language }}</span>
                 </li>
             </ul> 
+            
         </main>
     </div>
     <!-- VUE JS -->
