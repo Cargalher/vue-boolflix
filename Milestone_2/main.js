@@ -34,7 +34,22 @@ const app = new Vue ({
             })
         },
         searchTvShows() {
-            
+            axios
+            .get('https://api.themoviedb.org/3/search/movie', {
+                params:{
+                    api_key: '2c02b686abeba1d47393671cb89a17d8',
+                    query: this.query,
+                    language: 'it-IT',
+                },
+            })
+            .then((response) => {
+
+                
+            })
+            .catch(e => {
+                console.error(e);
+                this.error = 'Sorry something went wrong' + e;
+            })
         }
 
     },
