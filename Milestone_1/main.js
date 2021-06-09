@@ -1,42 +1,41 @@
 const app = new Vue ({
     el:'#app',
     data:{
-        url: 'https://api.themoviedb.org/3/search/movie',
-        query: [],
-        api_key: '2c02b686abeba1d47393671cb89a17d8',
-        title:'',
-        original_title: '',
-        original_language:'',
-        searched_text: ''
+        query: '',
+        results: [],
+        movies: [],
+        tvShows: [],
+        error:null,
+        
     },
     methods:{
         search(){
-        
-            
-        }
+        this.results=[];
+        this.searchMovies(); 
+        },
+        searchMovies() {
+            axios
+            .get('https://api.themoviedb.org/3/search/movie', {
+                params:{
+                    api_key: '2c02b686abeba1d47393671cb89a17d8',
+                    query: this.query,
+                    language: 'it-IT',
+                },
+            })
+            .then((response) => {
+                this.movies = response.data.results;
+                this.results = [...this.results, ...this.movies];
+              })
+            .catch(e => {
+                console.error(e);
+                this.error = 'Sorry something went wrong' + e;
+            })
+        },
+       
+
     },
     mounted(){
-        const fullUrl = `${this.url}?api_key=${this.api_key}&query=${this.movie}`;
-        console.log(fullUrl);
-       
-        
-        axios
-            .get(fullUrl)
-            .then(resp => {
-                this.title = resp.data.response;
-                console.log(this.title);
-               
-
-
-                this.title = resp.data.title;
-                this.original_title = resp.data.original_title;
-                this.original_language = resp.data.original_language;
-                this.vote_average = resp.data.vote_average;
-
-            })
-            // .catch(e => {
-            //     console.error(e);
-            // })
+   
     }
 
 })

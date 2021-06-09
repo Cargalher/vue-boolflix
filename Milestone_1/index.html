@@ -15,16 +15,22 @@
         <nav>
             <img class="logo" src="./img/netflix-logo.png" alt="">
         </nav>
-        <main>
+        <main class="container">
             <input type="search" name="" id="" placeholder="Search for a movie or show"
-              v-model="query" >
+              v-model="query" @keyUp.enter="search" >
             <button type="submit" class="searchButton" @click="search">
                 <i class="fa fa-search"></i>
                 Search
-             </button>
-             <ul v-model="query">
-                 <li v-for="title in titles" :type= "search"> {{title}}</li>
-             </ul>
+            </button>
+            <ul class ="MoviesContainer">
+                <li v-for="result in results" class="movie">
+                    <h2 v-if="result.title">{{ result.title }}</h2>
+                    <span v-if="result.original_title">{{ result.original_title }}</span>
+                    <span v-if="result.original_name">{{ result.original_name }}</span>
+                    <span v-if="result.original_language">{{ result.original_language }}</span>
+                    <span v-if="result.vote_average">{{ result.vote_average }}</span>
+                </li>
+            </ul> 
         </main>
     </div>
     <!-- VUE JS -->

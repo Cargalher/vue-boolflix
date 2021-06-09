@@ -6,6 +6,10 @@
 body{
     background-color: rgb(53, 53, 92);
 }
+.container{
+    width:90%;
+    margin:auto;
+}
 nav{
     background-color: black;
 }
@@ -14,8 +18,8 @@ nav{
     margin:15px;
 }
 input{
-    margin-top: 15px;
-    margin-left: 15px;
+    margin: 15px 0;
+    
     width: 13%;
     padding: 0.5rem;
     border-radius: 0.5rem;
