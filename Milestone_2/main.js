@@ -6,7 +6,7 @@ const app = new Vue ({
         movies: [],
         tvShows: [],
         error:null,
-        flags: ['it', 'en']
+        flags: ['it', 'en','es', 'fr', 'ja']
         
     },
     methods:{
