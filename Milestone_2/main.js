@@ -6,6 +6,7 @@ const app = new Vue ({
         movies: [],
         tvShows: [],
         error:null,
+        flags: ['it', 'en']
         
     },
     methods:{
@@ -43,8 +44,10 @@ const app = new Vue ({
                 },
             })
             .then((response) => {
+                this.tvShows = response.data.results;
+                this.results = [...this.results, ...this.tvShows];
 
-                
+
             })
             .catch(e => {
                 console.error(e);
