@@ -12,6 +12,8 @@ const app = new Vue ({
         search(){
         this.results=[];
         this.searchMovies(); 
+        this.searchTvShows();
+
         },
         searchMovies() {
             axios
@@ -31,7 +33,9 @@ const app = new Vue ({
                 this.error = 'Sorry something went wrong' + e;
             })
         },
-       
+        searchTvShows() {
+            
+        }
 
     },
     mounted(){
