@@ -24,26 +24,25 @@
             
         </nav>
         <main class="container">
-            <!-- <input type="search" name="" id="" placeholder="Search for a movie or show"
-              v-model="query" @keyUp.enter="search" >
-            <button type="submit" class="searchButton" @click="search">
-                <i class="fa fa-search"></i>
-                Search
-            </button> -->
             <div class ="MoviesContainer">
-                <div v-for="result in results" class="movie">
-                    <div class="poster">
+                
+                <div v-for="result in results" class="card">
+
+                    <div class="card_front">
                         <img :src="showPoster(result.poster_path)" alt="">
                     </div>
-                    <h2 v-if="result.title">{{ result.title }}</h2>
-                    <h2 v-if="result.name"> {{ result.name }}</h2> 
-                    <span v-if="result.original_title">{{ result.original_title }}</span>
-                    <span v-if="result.original_name">{{ result.original_name }}</span>
-                    <!-- <span v-if="result.original_language">{{ result.original_language }}</span> -->
-                    <span v-if="result.vote_average">{{ result.vote_average }}</span>
-                    <img class="flag" v-if="flags.includes(result.original_language)"
-                    :src="'./img/' + result.original_language +'.png'" >
-                    <span v-else>{{ result.original_language }}</span>
+
+                    <div class="card_back">
+                        <h2 v-if="result.title">{{ result.title }}</h2>
+                        <h2 v-if="result.name"> {{ result.name }}</h2> 
+                        <span v-if="result.original_title">{{ result.original_title }}</span>
+                        <span v-if="result.original_name">{{ result.original_name }}</span>
+                        <span v-if="result.vote_average">{{ result.vote_average }}</span>
+                        <img class="flag" v-if="flags.includes(result.original_language)"
+                        :src="'./img/' + result.original_language +'.png'" >
+                        <span v-else>{{ result.original_language }}</span>
+                    </div>
+                    
                 </div>
             </div> 
             

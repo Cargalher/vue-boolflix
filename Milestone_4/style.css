@@ -10,6 +10,7 @@ body{
     width:90%;
     margin:auto;
 }
+/* ------------------------------------------------------nav bar */
 nav{
     background-color: black;
     display: flex;
@@ -29,8 +30,20 @@ input{
     padding: 0.3rem;
     border-radius: 0.5rem;
 }
+/* ------------------------------------------------------main content */
 .flag{
     width:20px;
     margin-left: 10px;
     vertical-align: middle;
+}
+.MoviesContainer{
+display: flex;
+flex-wrap:wrap;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+}
+.card_back{
+    display: none;
 }
