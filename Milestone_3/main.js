@@ -1,3 +1,7 @@
+const noPoster = 'img/Poster_Not_Available.jpg';
+const urlPoster = 'https://image.tmdb.org/t/p/';
+const posterSize = "w154";
+
 const app = new Vue ({
     el:'#app',
     data:{
@@ -7,7 +11,9 @@ const app = new Vue ({
         tvShows: [],
         error:null,
         flags: ['it', 'en','es', 'fr', 'ja'],
-        urlPoster: 'https://image.tmdb.org/t/p/'
+        // urlPoster: 'https://image.tmdb.org/t/p/',
+        // posterSize: "w154",
+        // noPoster: 'img/Poster_Not_Available.jpg',
         
     },
     methods:{
@@ -54,7 +60,13 @@ const app = new Vue ({
                 console.error(e);
                 this.error = 'Sorry something went wrong' + e;
             })
-        }
+        },
+        showPoster (posterPath){
+            if(posterPath) {
+                return urlPoster + posterSize + posterPath;
+            }
+                return noPoster;
+            }
 
     },
     mounted(){
