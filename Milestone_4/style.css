@@ -33,12 +33,12 @@ input{
 }
 /* ------------------------------------------------------main content */
 
-.flag{
+.flag {
     width:20px;
     margin-left: 10px;
     vertical-align: middle;
 }
-img{
+.posterImg{
     width: 300px;
     height: 440px;
 }
@@ -62,7 +62,7 @@ img{
 }
 .card_front{
    
-  
+  display: none;
     
  
 }
