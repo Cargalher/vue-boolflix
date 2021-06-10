@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(53, 53, 92);
+}
+.container{
+    width:90%;
+    margin:auto;
+}
+nav{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    height: 70px;
+    margin:15px;
+}
+input{
+    width: 80%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+.fa-search{
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+}
+.flag{
+    width:20px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
