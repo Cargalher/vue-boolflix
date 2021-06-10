@@ -33,7 +33,7 @@
             <div class ="MoviesContainer">
                 <div v-for="result in results" class="movie">
                     <div class="poster">
-                        <img :src="showPoster(result.posterPath)" :alt="result.title ? result.title : result.name">
+                        <img :src="showPoster(result.posterPath)" alt="">
                     </div>
                     <h2 v-if="result.title">{{ result.title }}</h2>
                     <h2 v-if="result.name"> {{ result.name }}</h2> 
