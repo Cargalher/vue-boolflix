@@ -37,7 +37,7 @@ const app = new Vue ({
         },
         searchTvShows() {
             axios
-            .get('https://api.themoviedb.org/3/search/movie', {
+            .get('https://api.themoviedb.org/3/search/tv', {
                 params:{
                     api_key: '2c02b686abeba1d47393671cb89a17d8',
                     query: this.query,
