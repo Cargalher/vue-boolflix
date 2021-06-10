@@ -16,10 +16,11 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 80px;
 }
-.logo{
-    height: 70px;
-    margin:15px;
+
+h1{
+    color: red;
 }
 input{
     width: 80%;
@@ -31,19 +32,40 @@ input{
     border-radius: 0.5rem;
 }
 /* ------------------------------------------------------main content */
+
 .flag{
     width:20px;
     margin-left: 10px;
     vertical-align: middle;
 }
+img{
+    width: 300px;
+    height: 440px;
+}
 .MoviesContainer{
-display: flex;
-flex-wrap:wrap;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 15px;
+
 }
 .card{
-    display: flex;
-    flex-direction: column;
+  
+    width: 300px;
+    height: 440px;
+    border: 1px solid white;
+    margin: 5px;
+    
+   
+}
+.card_front{
+   
+  
+    
+ 
 }
 .card_back{
-    display: none;
+    
 }
