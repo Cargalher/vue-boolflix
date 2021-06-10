@@ -1,6 +1,6 @@
 const noPoster = 'img/Poster_Not_Available.jpg';
 const urlPoster = 'https://image.tmdb.org/t/p/';
-const posterSize = "w154";
+const posterSize = "w342";
 
 const app = new Vue ({
     el:'#app',
