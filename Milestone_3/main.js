@@ -61,9 +61,9 @@ const app = new Vue ({
                 this.error = 'Sorry something went wrong' + e;
             })
         },
-        showPoster (posterPath){
-            if(posterPath) {
-                return urlPoster + posterSize + posterPath;
+        showPoster (poster_path){
+            if(poster_path) {
+                return urlPoster + posterSize + poster_path;
             }
                 return noPoster;
             }
