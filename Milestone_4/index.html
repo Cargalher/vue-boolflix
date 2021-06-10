@@ -33,14 +33,15 @@
                     </div>
 
                     <ul class="card_back">
-                        <h2 v-if="result.title">{{ result.title }}</h2>
-                        <h2 v-if="result.name"> {{ result.name }}</h2> 
-                        <span v-if="result.original_title">{{ result.original_title }}</span>
-                        <span v-if="result.original_name">{{ result.original_name }}</span>
-                        <span v-if="result.vote_average">{{ result.vote_average }}</span>
-                        <img class="flag" v-if="flags.includes(result.original_language)"
-                        :src="'./img/' + result.original_language +'.png'" >
-                        <span v-else>{{ result.original_language }}</span>
+                        <li v-if="result.title">Title: {{ result.title }}</li>
+                        <li v-if="result.name">Title: {{ result.name }}</li> 
+                        <li v-if="result.original_title">Original Title: {{ result.original_title }}</li>
+                        <li v-if="result.original_name">Original Title: {{ result.original_name }}</li>
+                        <li v-if="result.vote_average">Vote: {{ result.vote_average }}</li>
+                        <li><img class="flag" v-if="flags.includes(result.original_language)"
+                        :src="'./img/' + result.original_language +'.png'" ></li>
+                        <li v-else>{{ result.original_language }}</li>
+                        <li v-if="result.overview">Overview: {{ result.overview }}></li>
                     </ul>
                     
                 </div>
