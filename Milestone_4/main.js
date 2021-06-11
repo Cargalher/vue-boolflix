@@ -74,6 +74,7 @@ const app = new Vue ({
         //     };
         //     return puntuation.join("")
         // }
+        
     },
     mounted(){
    
