@@ -66,8 +66,14 @@ const app = new Vue ({
                 return urlPoster + posterSize + poster_path;
             }
                 return noPoster;
-            }
-
+            },
+        // showStars(num){
+        //     const puntuation =[];
+        //     for(const i = 0; i< num;i++){
+        //     puntuation.push("<i class='fas fa-star'></i>")
+        //     };
+        //     return puntuation.join("")
+        // }
     },
     mounted(){
    

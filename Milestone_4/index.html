@@ -38,6 +38,7 @@
                             <li v-if="result.original_title"><strong>Original Title: </strong>{{ result.original_title }}</li>
                             <li v-if="result.original_name"><strong>Original Title: </strong>{{ result.original_name }}</li>
                             <li v-if="result.vote_average"><strong>Vote: </strong>{{ result.vote_average }}</li>
+                            <!-- <li class="star"><i class='fas fa-star'></i></li> -->
                             <li><strong>Language: </strong><img class="flag" v-if="flags.includes(result.original_language)"
                             :src="'./img/' + result.original_language +'.png'" ></li>
                             <li v-else>{{ result.original_language }}</li>

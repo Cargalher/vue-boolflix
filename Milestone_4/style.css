@@ -99,3 +99,7 @@ li{
     transform: rotateY(180deg);
     display: block;
 }
+.star{
+    color: goldenrod;
+    
+}
